@@ -1,6 +1,5 @@
 # See local changes
 git status                  # Show the working tree status
-git diff                    # Show changes current working directory (not yet staged)
 git diff --cached           # Show changes currently staged for commit
 
 # Add files to staging (before a commit)
