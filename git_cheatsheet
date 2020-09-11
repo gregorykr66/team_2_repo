@@ -1,0 +1,20 @@
+# See local changes
+git status                  # Show the working tree status
+git diff                    # Show changes current working directory (not yet staged)
+git diff --cached           # Show changes currently staged for commit
+
+# Add files to staging (before a commit)
+git add myfile.txt          # Add myfile.txt to stage
+git add .                   # Add entire working directory to stage
+
+# Make a commit
+git commit                              # Make a new commit with the changes in your staging area. This will open an editor for a commit message.
+git commit -m "I love documentation"    # Make a new commit with a commit message from the command line
+git commit -a                           # Make a new commit and automatically "add" changes from all known files
+git commit -am "I still do!"            # A combination of the above
+git commit --amend                      # Re-do the commit message of the previous commit (don't do this after pushing!)
+                                        #   We _never_ change "public history"
+git reset <file>                        # Unstage a staged file leaving in working directory without losing any changes.
+git reset --soft [commit_hash]          # resets the current branch to <commit>. Does not touch the staging area or the working tree at all. 
+                                        # --hard mode would discard all changes.
+i
